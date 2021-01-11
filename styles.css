@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rebeccapurple;
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+#main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#refLogo {
+  width: 100%;
+  height: 50px;
+}
+
+i {
+  position: relative;
+  left: 84.5%;
+  top: -55px;
+  z-index: 10;
+}
+
+.movie {
+  background-color: rgb(53, 20, 87);
+  width: 300px;
+  border-radius: 5px;
+  box-shadow: 0 4px 5px rgb(19, 4, 34);
+  margin: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+header {
+  margin-top: 0.5rem;
+  height: 100px;
+  background-color: rgb(30, 7, 53);
+}
+
+header img {
+  margin-top: 1.5rem;
+}
+
+#search {
+  position: relative;
+  top: -55px;
+  font-family: inherit;
+  border: none;
+  padding: 1rem 2.2rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  outline: none;
+  left: 83%;
+  height: 3rem;
+  width: 15%;
+  background-color: rebeccapurple;
+  color: white;
+  border-radius: 14px;
+}
+
+#search::placeholder {
+  color: rgb(255, 255, 255);
+}
+
+.movie img {
+  width: 100%;
+  height: 450px;
+}
+
+.movie-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.911);
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+  margin: 0;
+}
+
+.movie-info span {
+  background-color: rebeccapurple;
+  border-radius: 4px;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+.movie-info span.red {
+  color: rgb(148, 1, 1);
+}
+
+.movie-info span.green {
+  color: rgb(0, 173, 0);
+}
+
+.movie-info span.mid {
+  color: white;
+}
+
+.overview {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 100%;
+  overflow: auto;
+  background-color: white;
+  font-weight: bold;
+  padding: 2rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in;
+}
+
+.overview h4 {
+  margin-top: 0;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
