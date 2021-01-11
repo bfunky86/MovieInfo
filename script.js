@@ -1,15 +1,20 @@
+let key = config.key;
 const APIURL =
-  "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=426443989d020900821cc9ef53834312&page=1";
+  "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=" +
+  key +
+  "&page=1";
 
 const IMGPATH = "https://image.tmdb.org/t/p/w1280";
 const SEARCHAPI =
-  "https://api.themoviedb.org/3/search/movie?&api_key=426443989d020900821cc9ef53834312&query=";
+  "https://api.themoviedb.org/3/search/movie?&api_key=" + key + "&query=";
 
 const movieEl = document.querySelector(".movie");
 
 const main = document.querySelector("#main");
 const form = document.getElementById("form");
 const search = document.getElementById("search");
+
+console.log(key);
 
 //initally get popular movies
 getMovies(APIURL);
